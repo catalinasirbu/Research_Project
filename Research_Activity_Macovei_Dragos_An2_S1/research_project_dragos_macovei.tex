@@ -1,0 +1,111 @@
+\documentclass[12pt, twoside]{article}
+\usepackage[top=4.3cm, bottom=5.7cm, left = 3.74cm, right = 3.75cm]{geometry}
+\usepackage{times}
+\usepackage{authblk}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage{chemfig}
+\usepackage{centernot} 
+\usepackage[labelsep=space]{caption}
+\usepackage{float}
+\renewcommand{\figurename}{Fig.}
+
+
+\begin{document}
+	\begin{center}
+	\begin{huge}
+	
+	\textbf{Commercial-suppressing embedded system}
+	\end{huge}
+	
+	\begin{large}
+		Dragoș Macovei$^1$
+	\end{large}
+	
+	
+	\small {$^1$Politehnica University of Bucharest, Faculty of Electronics, Telecommunications and Technology of Information, Bucharest, Romania}\newline
+	
+	\texttt {Email: nicolae.macovei@upb.ro}\newline
+	
+	\textbf{Key-words:} Commercials detection; Embedded systems; Sound recognition; Sound volume cancellation; IR signal emitter; Linux/ARM; HDMI interface;
+
+
+	\end{center}
+
+\section{Introduction}
+
+This system aims to detect commercials that are playing on TV and sends a signal to mute or lower the volume. It consists of two subsystems: detection and sound volume cancellation. The detection subsystem can detect commercials through video via HDMI interface or audio through any standard interface. The sound volume cancellation subsystem cancels the volume through an IR signal emitter by copying the MUTE signal from a TV remote during system installation. The system also includes a semi-automated testing process, which is done manually first and then automatically after the scenario is created. A few hours of audio or audio/video stream will be recorded and run on a PC against the detection system. The results will be inspected manually, added to a catalog of expected behaviors, and run as a test with each new version of the detection system for efficiency results. The technologies used must be compatible with embedded systems such as Linux/ARM or equivalent. Internet access, either through Wi-Fi or Ethernet, is considered permanent. The system uses only free services or one-time payments and does not require a monthly subscription, such as for sound recognition.
+
+\section{Selected papers}
+\begin{itemize}
+\item Chan, K. Y., P. C. Yong, S. Nordholm, C. K. F. Yiu, and H. K. Lam. "A Hybrid Noise Suppression Filter for Accuracy Enhancement of Commercial Speech Recognizers in Varying Noisy Conditions." Applied Soft Computing, vol. 14, no. A, pp. 132-139, Jan. 2014.
+\item Gauch, J. M., and A. Shivadas. "Finding and Identifying Unknown Commercials using Repeated Video Sequence Detection." Computer Vision and Image Understanding, vol. 103, no. 1, pp. 80-88, July 2006.
+\item De La Cruz, M., Martinez, R., Reed, T., and Smith, M. "Flashback, A television video recording and commercial viewing reduction device." Department of Electrical Engineering and Computer Science, University of Central Florida, June 2014.
+\item Yu, Tingting, Ahyoung Sung, Witawas Srisa-an, and Gregg Rothermel. "An approach to testing commercial embedded systems." Journal of Systems and Software, vol. 88, pp. 207-230, Feb. 2014. ISSN 0164-1212.
+\item Li, Y., and S. Luo. "A TV Commercial Detection System." In Web Information Systems and Mining, edited by Z. Gong, X. Luo, J. Chen, J. Lei, and F. L. Wang. Lecture Notes in Computer Science, vol. 6988, Springer, Berlin, Heidelberg, 2011.
+
+\end{itemize}
+
+\section{Rejected papers}
+\begin{itemize}
+\item Xian-Sheng Hua, Lie Lu, and Hong-Jiang Zhang. 2005. "Robust learning-based TV commercial detection." In 2005 IEEE International Conference on Multimedia and Expo, Amsterdam, Netherlands, pp. 3924-3927.
+\item X. Wu and S. Satoh. 2013. "Ultrahigh-Speed TV Commercial Detection, Extraction, and Matching." In IEEE Transactions on Circuits and Systems for Video Technology, vol. 23, no. 6, pp. 1054-1069.
+\item Jen-Hao Yeh, Jun-Cheng Chen, Jin-Hau Kuo, and Ja-Ling Wu. 2005. "TV commercial detection in news program videos." In 2005 IEEE International Symposium on Circuits and Systems (ISCAS), Kobe, Japan, pp. 4594-4597 Vol. 5.
+\item Mengyue Li, Yuchun Guo, and Yishuai Chen. 2017. "CNN-based Commercial Detection in TV Broadcasting." In Proceedings of the 2017 VI International Conference on Network, Communication and Computing (ICNCC 2017), Association for Computing Machinery, New York, NY, USA, pp. 48–53.
+\item L. Meng, Y. Cai, M. Wang, and Y. Li. 2009. "TV Commercial Detection Based on Shot Change and Text Extraction." In 2009 2nd International Congress on Image and Signal Processing, Tianjin, China, pp. 1-5.
+\item S. N. Singh and M. L. Rothschild. 2018. "Recognition as a Measure of Learning from Television Commercials." Journal of Marketing Research, vol. 20, no. 3, pp. 235–248.
+
+\end{itemize}
+
+\section{Summaries of the ‘selected papers’}
+\subsection{A hybrid noise suppression filter for accuracy enhancement of commercial speech recognizers in varying noisy conditions - Chan, K. Y., Yong, P. C., Nordholm, S., Yiu, C. K. F., \& Lam, H. K.}
+This paper presents a hybrid noise suppression filter designed to enhance the recognition accuracy of commercial speech recognizers in various noisy environments. The filter, based on a sigmoid function and an adaptive-network-based fuzzy inference system, intends to decrease recognition errors and improve accuracy in comparison to existing noise suppression filters and sigmoid function-based filters. The proposed filter was evaluated by interfacing with a commonly used commercial speech recognizer and showed improved recognition accuracy and computational time under noisy conditions in factories.
+
+This paper highlights the drawbacks of speech recognition technology when used in noisy environments and its impact on the rehabilitation and biomedical engineering sectors. It notes that traditional commercial speech recognition systems are prone to errors in untrained noisy environments, which can be hazardous to disabled users. To address this issue, the paper introduces a new hybrid noise suppression filter known as ANFIS-SF. This filter blends ANFIS and sigmoid filter mechanisms to improve the accuracy of the commercial speech recognizer in different noisy conditions. The parameters of the filter are optimized through particle swarm optimization to maintain the right balance between noise reduction, speech distortion, and musical noise. The proposed ANFIS-SF is then tested using a commercial speech recognizer based on the RSC3X synthesis microcontroller, which is a finite-state machine that can be in a standby or trigger state.
+
+
+
+\subsection{Finding and identifying unknown commercials using repeated video sequence detection - Gauch, J. M., \& Shivadas, A.}
+This research paper details an innovative system for automatically detecting unknown commercials in television broadcast signals. The system is designed to aid in the generation of marketing reports for the broadcasting industry. The system is made up of two main components: repeated video sequence detection and feature-based video sequence classification. The first step in the process is to digitize the video signals, extract features, and divide the video into meaningful video clips through temporal video segmentation. The repeated video sequence detection algorithms then search for repeated shots and the video sequence classification algorithm identifies commercials based on various features such as black/silent frames and the ratio of hard cuts to dissolves/fades. The system was tested on 72 hours of television programming and achieved over 93\% accuracy in identifying new commercials and non-commercials. 
+
+This innovative system provides a cost-effective and efficient solution to the problem of manual tracking of commercials, making it a valuable tool for the broadcasting industry.
+
+
+
+\subsection{Flashback, A television video recording and commercial viewing reduction device - De La Cruz, M., Martinez, R., Reed, T., \& Smith, M.}
+The Flashback device is a real-time commercial detection system designed to enhance the viewer's television experience. It consists of three stages - Black Screen Detection, Cut Rate Detection, and Logo Placement Detection - and utilizes digital signal processors, software, and hardware components such as a Printed Circuit Board, Digital Signal Processor, High Definition Media Interface, and Ethernet Physical Transceiver Chip. The device, which can be controlled with infrared remote control, has the ability to detect the end of commercial breaks and allow viewers to switch channels without missing primary programming. The device records the primary programming and eliminates commercial blocks for uninterrupted playback.
+
+The hardware requirements for the Flashback device include 512 MB of RAM, 16 GB of storage, a 1 GHz processing clock frequency, and dual television tuners with a frequency range of 42 - 866 MHz. The software requirements include a responsive and non-invasive user interface, efficient background threads that can process at least 30 video frames per second with a commercial detection time of fewer than 0.5 seconds, and a live television lag of no greater than five seconds.
+
+The Flashback project was completed during the 2013-2014 academic year and has demonstrated the potential to revolutionize the television viewing experience. However, the design has limitations and the team plans to revisit and improve the device post-graduation. The design simplifications made were for patent requirements and did not meet the team's initial ambitious standards.
+
+
+\subsection{An approach to testing commercial embedded systems - Yu, Tingting, Ahyoung Sung, Witawas Srisa-an, and Gregg Rothermel}
+This article presents an approach for testing embedded systems software used in commercial consumer devices like mobile phones and smart televisions. Improved testing methods are important to ensure the reliability of these devices. The proposed approach is made up of two techniques: test data selection and failure observation. The test data selection uses dataflow analysis to identify points of interaction between software components and layers in embedded systems, while also monitoring the interaction between tasks. The failure observation technique uses instrumentation and program analysis to record various aspects of system execution and compare them to intended system properties. Results from empirical studies show that the proposed approach is effective in detecting faults through the use of adequate test cases and improved oracles. The use of these criteria also enhances the fault-detection capabilities of the oracles.
+
+The article presents an approach to help system testers of embedded systems in commercial consumer devices perform testing more effectively. The approach consists of two techniques: (1) test adequacy criteria that focus on faults not related to timing and interactions between system layers and tasks, and (2) test oracles that use instrumentation to record aspects of system execution and compare them to intended system properties derived from program analysis. The results of empirical studies on three embedded system applications show that the adequacy criteria can guide the creation of effective test cases and the oracles can expose faults that cannot be found using typical output-based oracles. The use of the criteria accentuates the fault-detection effectiveness of the oracles.
+
+The focus of this article is on faults that occur due to interactions between system layers and user tasks. The article outlines the characteristics and properties of these systems, the processes by which they are developed and tested, and the adequacy criteria for these systems. The authors present an empirical study of the testing technique using enhanced oracles, which use instrumentation to record various aspects of execution behavior and compare it to certain intended system properties. The study examines the effectiveness of this technique in detecting faults. The article also reviews related work on verifying embedded systems and concludes by outlining future work in this area.
+
+
+\subsection{A TV Commercial Detection System - Li, Y., Luo, S.}
+This paper presents a framework for a TV commercial detection system, which is an essential step in TV broadcast monitoring. The two main tasks of this system are to rapidly detect known commercials stored in a database and accurately recognize unknown commercials that appear for the first time in TV streaming. The purpose of automatic TV commercial detection is driven by several motivations, including the desire for companies in marketing research and advertising to identify commercial breaks from live TV streams, to verify if a TV commercial has been broadcasted as contracted, to know how their competitors are conducting their advertisements, and to store recognized advertisements in a video database. The public may also want to record TV programs and exclude commercials, which has led to the development of commercial skipping systems. Additionally, TV commercial classification with respect to the advertised products or services can help with commercial filtering toward personalized consumer services. The technology of TV commercials has changed greatly and with the development of digitization technology and multimedia information compression and archiving, it is now inexpensive to store large amounts of video.
+
+There are three ways to find commercials from TV streams or a video database, including manual editing, text-based retrieval, and content-based retrieval. Manual editing is an inefficient and imprecise process that requires a considerable amount of human time and effort. Text-based retrieval is also limited due to the subjective human perception of the content being annotated. Content-based retrieval is a system that solely relies on the content of the video, making it a more efficient and precise approach. Detecting TV commercials from long video streams and retrieving similar commercials from a centralized database is a crucial problem that requires video processing techniques, such as video segmentation, feature extraction, feature vector organization, indexing, and retrieval. Existing commercial detection approaches can be divided into two categories: rule-based and content-based methods. The rule-based methods rely on prior knowledge of the commercial structure, while the content-based methods rely on the analysis of the audio and visual features of the commercial.
+
+
+\section{Conclusions}
+The hybrid noise suppression filter, ANFIS-SF, is designed to enhance the recognition accuracy of commercial speech recognizers in noisy environments. This filter is a combination of the ANFIS and sigmoid function filters and its parameters are optimized through particle swarm optimization. The proposed filter was tested using a commercial speech recognizer and showed improved recognition accuracy and computational time compared to existing filters under noisy conditions in factories. It’s important to address the issue of errors in speech recognition technology, especially in untrained noisy environments where it can be hazardous to disabled users. This ANFIS-SF is a step towards improving speech recognition technology and making it more accessible and safer for users.
+
+A system has been developed to automatically detect unknown commercials in television broadcast signals, providing a cost-effective and efficient solution to the problem of manual tracking of commercials for the broadcasting industry. The system was tested on 72 hours of television programming and achieved over 93\% accuracy in identifying commercials and non-commercials.
+
+A framework for detecting TV commercials is a crucial step in TV broadcast monitoring, with the aim of addressing several motivations including verifying contracted broadcast and providing personalized services. The process involves using content-based retrieval, which relies on the analysis of audio and visual features of the commercials, rather than manual editing or text-based retrieval. The existing commercial detection approaches are divided into rule-based and content-based methods, with the latter being more efficient and precise.
+
+
+\end{document}

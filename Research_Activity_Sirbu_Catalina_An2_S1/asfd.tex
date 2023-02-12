@@ -1,0 +1,147 @@
+\documentclass[12pt, twoside]{article}
+\usepackage[top=4.3cm, bottom=5.7cm, left = 3.74cm, right = 3.75cm]{geometry}
+\usepackage{times}
+\usepackage{authblk}
+\usepackage{graphicx} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage{amssymb}
+\usepackage{chemfig}
+\usepackage{centernot} 
+\usepackage[labelsep=space]{caption}
+\usepackage{float}
+\renewcommand{\figurename}{Fig.}
+
+
+\begin{document}
+	\begin{center}
+	\begin{huge}
+	
+	\textbf{Voice chatbot for solving technical problems}
+	\end{huge}
+	
+	\begin{large}
+		Cătălina-Georgiana SÎRBU$^1$
+	\end{large}
+	
+	
+	\small {$^1$Politehnica University of Bucharest, Faculty of Electronics, Telecommunications and Technology of Information, Bucharest, Romania}
+	
+	\texttt {Email: catalina.sirbu@upb.ro}
+	
+	\textbf{Key-words:} Chatbot; Technical problems; IT problems; Natural language processing (NLP); Machine Learning model; Training data set; Web application; Technical Chatbot Natural Language Processing; Python programming language
+
+	\end{center}
+
+\section{Introduction}
+
+The present project aims to develop a web application through which the user can solve various technical/IT problems by interacting by voice with a chatbot. The application will be composed of a back-end NLP component written in the Python programming language and a front-end component written in Angular.js. Through the front-end component, the user will interact with the system by answering vocally the audio questions addressed by the application in order to solve the technical problem. The front-end component will have the following functionalities: F1 - Accessing the back-end NLP component to obtain the text of the question to be addressed to the user; F2 - Accessing Zevo Live TTS to get the audio question based on the previous text; F3 - Addressing the audio question to the user; F4 - Fetching user's audio response and transcribing it to text using Zevo Live STT; F5 - Sending the user's text response to the back-end NLP component to obtain the text of the following question to be addressed to the user; F6 - Displaying all the texts of the questions and answers on the screen; F7 - Summarizing information about the problem and possible solutions.
+
+The back-end NLP component will have the standard functionalities of a text chatbot: it will generate appropriate text answers to the user's questions, it will generate relevant text questions depending on the user's responses, etc. Various approaches to creating text chatbots, relevant scientific articles, relevant toolkits, etc. will be studied. Additionally, a training/evaluation data set of the chatbot-type machine learning component will be collected. We will design and implement the most appropriate ML model and integrate this model into the back-end NLP component.
+
+\section{Selected papers}
+\begin{itemize}
+\item Aleedy, M., Hadil, S., \& Bezbradica, M. (2019) - \textbf{Generating and analyzing chatbot responses using natural language processing}. International Journal of Advanced Computer Science and Applications, 10(9), ISSN 2158-107X, March 2019.
+\item Adamopoulou, E., \& Moussiades, L. (2020) - \textbf{An Overview of Chatbot Technology}. In I. Maglogiannis, L. Iliadis, \& E. Pimenidis (Eds.), Artificial Intelligence Applications and Innovations (pp. 1-19). IFIP Advances in Information and Communication Technology, 584. Springer, Cham, May 2020.
+\item Sinarwati Mohamad Suhaili, N., Salim, N., \& Jambli, M. (2021) - \textbf{Service chatbots: A systematic review}. Expert Systems with Applications, 184, ISSN 0957-4174, July 2021.
+\item Susanna, C. L., Pratyusha, R., Swathi, P., Rishi Krishna, P., \& Sai Pradeep, V. (2020) - \textbf{College Enquiry Chatbot}. International Research Journal of Engineering and Technology, 7(3), 784. e-ISSN: 2395-0056, p-ISSN: 2395-0072, March 2020
+\item Dharwadkar, R., \& Deshpande, N. A. (2018) - \textbf{A Medical ChatBot}. International Journal of Computer Trends and Technology, 60(1), June 2018.
+\end{itemize}
+
+\section{Rejected papers}
+\begin{itemize}
+\item Colace, F., De Santo, M., Lombardi, M., Pascale, F., \& Pietrosanto, A. (2018). \textbf{Chatbot for E-Learning: A Case of Study}. International Journal of Mechanical Engineering and Robotics Research, 7(5), September 2018.
+\item Zeineb, S., Alaa, A. A., Mohamed, K., \& Househ, M. M. (2020). \textbf{Technical Aspects of Developing Chatbots for Medical Applications: Scoping Review}. Journal of Medical Internet Research, 22(12), December 2020.
+\item Abd-Alrazaq, A., Zeineb, S., Alajlani, M., Warren, J., Househ, M., \& Denecke, K. (2020). \textbf{Technical Metrics Used to Evaluate Health Care Chatbots: Scoping Review}. Journal of Medical Internet Research, 22(6), June 2020.
+\item Lee, M., Frank, L., \& IJsselsteijn, W. (2021). \textbf{Brokerbot: A Cryptocurrency Chatbot in the Social-technical Gap of Trust}. Computer Supported Cooperative Work, 30, 79–117, April 2021.
+\item Yang, H., \& Kim, H. (2021). \textbf{Development and Application of AI Chatbot for Cabin Crews}. Korean Journal of English Language and Linguistics, 21(11), October 2021.
+\item Nguyen, H. D., Tran, D. A., Do, H. P., \& Pham, V. T. (2020). \textbf{Design an Intelligent System to automatically Tutor the Method for Solving Problems}. International Journal of Integrated Engineering, 12(7), October 2020.
+\end{itemize}
+
+\section{Summaries of the ‘selected papers’}
+\subsection{Generating and analyzing chatbot responses using natural language processing - Aleedy, M., Hadil, S., \& Bezbradica, M.\cite{1}}
+The research described in this paper centers on the development of a virtual customer service agent, commonly referred to as a chatbot, through the use of natural language processing and deep learning methods. The goal is to create a machine that can converse with a human in a natural language, with the authors focusing on two main areas of deep learning: sequence-to-sequence learning and computational techniques for language content analysis and production.
+
+In order to develop this chatbot, the authors first prepared their data, which involved a number of preprocessing steps such as removing stop words, tokenizing, stemming, and converting the text into a numerical format. They then designed their model and generated responses, before evaluating the results using metrics such as Bilingual Evaluation Understudy (BLEU) and cosine similarity. After testing different models, including Long Short-Term Memory (LSTM) and Gated Recurrent Units (GRU), they found that the LSTM model performed best across all evaluation metrics and was therefore chosen as the final model.
+
+The use of chatbots has been a popular topic of research in the field of AI for many years, with scientists and researchers exploring various ways to improve the efficiency and customer experience of various industries through their use. These industries range from healthcare and IT service management to education, sales, and customer service.
+
+Natural Language Processing (NLP) is a critical component of this research, as it allows for the computer to understand and communicate with humans in a natural language. This involves analyzing the syntax and semantics of human language and converting it into a form that the computer can understand. In the authors' research, they used text mining techniques such as spell-checking and converting words into vector features through the use of methods like Word2vec.
+
+The authors aim to advance the current state of chatbots in the field of customer support by filling the gap in existing conversational systems research. They used three different deep learning algorithms (LSTM, GRU, and CNN) to generate responses, and found that the LSTM and GRU models generated more informative and valuable responses compared to the CNN model and the baseline model. The results of the study show promise for the future development of chatbots in the customer service industry, and the authors plan to continue their work by incorporating other similarity measures and improving their experiments through increased vocabulary size and epoch parameters.
+
+
+\subsection{An Overview of Chatbot Technology - Adamopoulou, E., \& Moussiades, L.\cite{2}}
+The paper discusses the evolution of chatbots and their increasing use in various fields such as Marketing, Education, Health Care, and Entertainment. It presents a historical overview of the use of chatbots, as well as the motivations and advantages behind their implementation. The paper also discusses the impact of social stereotypes on chatbot design, provides a classification of chatbots, and mentions the general architecture and main platforms for their creation.
+
+The text describes various concepts related to chatbot technology. It covers different techniques used in developing chatbots such as Pattern Matching, Artificial Intelligence Markup Language (AIML), Latent Semantic Analysis (LSA), Chatscript, RiveScript, Natural Language Processing (NLP), Natural Language Understanding (NLU), entities, and contexts. These techniques aim to make computers understand and respond appropriately to human language inputs.
+
+According to this paper, chatbots can be classified based on different parameters including knowledge domain, service provided, goals, input processing and response generation method, human aid, and build method. These classifications can range from open-domain chatbots to closed-domain chatbots, interpersonal chatbots to intrapersonal chatbots, informative chatbots to task-based chatbots, and rule-based models to generative models. Human-aided chatbots also exist and can utilize human computation, while the development platform can either be open-source or proprietary code.
+
+The use of chatbots has grown in popularity as technology continues to advance. They are becoming a more effective way to reach a broad audience on messaging apps and provide significant savings in customer service departments. This research provides useful information on the basic principles of chatbots and future research could focus on exploring chatbot platforms, their degree of functionality, and ethical concerns such as abuse and deception.
+
+
+\subsection{Service chatbots: A systematic review - Sinarwati Mohamad Suhaili, N., Salim, N., \& Jambli, M.\cite{3}}
+The article provides a comprehensive examination of the development of chatbots and conversational agents, which are AI-powered tools used for natural language communication between devices and users. The literature review covers a period of ten years, from 2011 to 2020, and focuses on the various aspects of chatbots, such as research trends, components, techniques, datasets, domains, and evaluation metrics.
+
+The review found that deep learning and reinforcement learning architectures are the most widely adopted techniques for processing user requests and generating appropriate responses. The Twitter dataset was the most commonly used dataset for evaluating chatbots, followed by the Airline Travel Information Systems and Ubuntu Dialog Corpora datasets. The evaluation metrics used to measure chatbot performance were accuracy, F1-Score, BLEU, recall, human evaluation, and precision.
+
+The review highlights the need for further research into the current literature on techniques for enhancing chatbot development. The study also provides a systematic analysis of the processes and strategies used for understanding user requests and generating accurate responses, as well as the most significant journals for service chatbots.
+
+Despite its focus on a specific set of research questions, the review provides a comprehensive analysis of the cutting-edge technologies used in service chatbots. The conclusion emphasizes the significance of chatbots in the service sector and the ongoing challenge of designing them to provide satisfactory replies to user requests, which are comparable to human employees.
+
+In summary, this literature review provides valuable insights into the field of chatbots and conversational agents, and it sheds light on the most significant trends and developments in this area. The study highlights the importance of chatbots in the service sector and the ongoing challenges involved in designing them to provide high-quality user experiences.
+
+\subsection{College Enquiry Chatbot - Susanna, C. L., Pratyusha, R., Swathi, P., Rishi Krishna, P., \& Sai Pradeep, V.\cite{4}}
+This article focuses on a College Enquiry Chatbot project that has been designed to provide students with an easy and convenient way to obtain information about their college. The chatbot has been developed using algorithms and the CodeIgniter PHP framework and is designed to answer students' questions about their college or university. This project was motivated by the desire to make information more accessible to students and reduce the need for them to visit the administration building to get answers. With the advancement of technology, the proposed system enables students to receive answers to their questions quickly and efficiently from the chatbot. If the chatbot is unable to provide an answer, the query is stored in a table for the admin to update later.
+
+The article also explores the impact of the COVID-19 pandemic on the job market and how it has changed the future of work. The pandemic has resulted in widespread job losses, reduced working hours, and a change in job types. The authors of the article argue that the pandemic has accelerated long-term trends in the job market, including automation and remote work. The increased use of technology, such as artificial intelligence and machine learning, has made it possible for machines to take on tasks that were previously performed by humans. This has created new jobs in fields such as software development and data analysis, while it has also resulted in job losses in industries like manufacturing and retail. Remote work has also become more widespread due to the pandemic, with many companies realizing the benefits of increased productivity and reduced costs.
+
+The article highlights the growing importance of skills such as adaptability and problem-solving in the future of work. As the job market evolves, workers will need to be able to adapt to new technologies and new ways of working. They will also need to have the ability to find creative solutions to complex problems. The authors stress the importance of workers being prepared for the changes that are to come and recommend that they develop skills that will be in demand in the future. They also recommend that governments and businesses invest in education and training programs to help workers prepare for the future of work.
+
+In conclusion, the College Enquiry Chatbot project highlights the potential of technology to make information more accessible and provide convenient solutions. The COVID-19 pandemic has hastened long-term trends in the job market, including automation and remote work, which will continue to shape the future of work. Workers will need to be prepared for these changes by developing skills such as adaptability and problem-solving, and governments and businesses will need to invest in education and training programs to help them prepare for the future of work.
+
+
+\subsection{A Medical ChatBot - Dharwadkar, R., \& Deshpande, N. A.\cite{5}}
+The article presents a medical chatbot system that is aimed at providing users with a convenient platform to seek information about health issues. The system is built using natural language processing (NLP) and Google API for voice-text and text-voice conversion. The main objective of the chatbot is to bridge the language gap between users and healthcare providers by offering immediate responses to the questions asked by users.
+
+People today are heavily dependent on the internet but do not always prioritize their health. They often avoid visiting hospitals for small health problems, which can become major diseases in the future. The medical chatbot system allows for human-computer communication through NLP. There are three main analyses in the system's NLP process, including the identification of linguistic relationships in sentences, text description, and semantic interpretation using knowledge of word meaning. The chatbot can be developed using artificial algorithms that analyze users' queries and provide related answers. The system is designed to keep track of the state of interaction and recall previous commands to give functionality.
+
+The experimental results showed that the proposed framework works on data of various sizes and domains. The system was trained on datasets from different cities of varying sizes to give information about heart disease. 60\% of each dataset was used for training the classifier, while the remaining 40\% was used for testing. The system was tested using three algorithms, K-nearest neighbors classifier, naive Bayes classifier, and support vector machine (SVM) classifier. The results showed that SVM performed better, with an accuracy of 94\% compared to the other two methods.
+
+In conclusion, the medical chatbot system provides a useful platform for medical institutions or hospitals to help users freely ask medical dosage-related queries by voice. The system uses NLP to allow computers to communicate with users in their terms and predicts diseases using the SVM algorithm and disease symptoms. The output is displayed on an android app, providing users with the necessary information for analysis. There is also scope for future development, including the use of voice and face recognition to mimic a counselor and interact with patients at deeper levels.
+
+
+
+\section{Conclusions}
+\begin{itemize}
+	\item The focus of this project should be on developing a chatbot through the use of natural language processing and deep learning methods to converse with humans in a natural language. The Long Short-Term Memory (LSTM) model performed the best in generating informative and valuable responses compared to other deep learning algorithms, which shows promise for the future development of chatbots in the customer service industry.
+	
+	\item Chatbots can be classified based on knowledge domain, service provided, and input processing and response generation method. Chatbots are becoming a popular way to reach a broad audience and provide customer service, but future research should also focus on their functionality and ethical concerns.
+	
+	\item The development of chatbots and conversational agents was reviewed over the past decade, focusing on research trends, components, techniques, datasets, domains, and evaluation metrics. The most commonly used techniques are deep learning and reinforcement learning, with the Twitter dataset being the most commonly used for evaluating performance. The significance of chatbots in the service sector and the ongoing challenge of designing them to provide accurate responses comparable to human employees it is a very well-searched subject.
+	
+	\item The usefulness of technology in making information accessible and providing convenient solutions is also demonstrated. The COVID-19 pandemic has accelerated trends in the job market, including automation and remote work, which will continue to shape the future of work. To prepare for these changes, workers will need to develop adaptable and problem-solving skills, while governments and businesses will need to invest in education and training programs.
+
+\end{itemize}
+
+\begin{thebibliography}{24}
+
+
+\bibitem{1}	Aleedy, M., Hadil, S., \& Bezbradica, M. (2019) - \textbf{Generating and analyzing chatbot responses using natural language processing}. International Journal of Advanced Computer Science and Applications, 10(9), ISSN 2158-107X, March 2019.
+
+\bibitem{2}	 Adamopoulou, E., \& Moussiades, L. (2020) - \textbf{An Overview of Chatbot Technology}. In I. Maglogiannis, L. Iliadis, \& E. Pimenidis (Eds.), Artificial Intelligence Applications and Innovations (pp. 1-19). IFIP Advances in Information and Communication Technology, 584. Springer, Cham, May 2020.
+
+\bibitem{3}	Sinarwati Mohamad Suhaili, N., Salim, N., \& Jambli, M. (2021) - \textbf{Service chatbots: A systematic review}. Expert Systems with Applications, 184, ISSN 0957-4174, July 2021.
+
+\bibitem{4}	Susanna, C. L., Pratyusha, R., Swathi, P., Rishi Krishna, P., \& Sai Pradeep, V. (2020) - \textbf{College Enquiry Chatbot}. International Research Journal of Engineering and Technology, 7(3), 784. e-ISSN: 2395-0056, p-ISSN: 2395-0072, March 2020
+
+\bibitem{5}	Dharwadkar, R., \& Deshpande, N. A. (2018) - \textbf{A Medical ChatBot}. International Journal of Computer Trends and Technology, 60(1), June 2018.
+
+\end{thebibliography}
+
+\end{document}
